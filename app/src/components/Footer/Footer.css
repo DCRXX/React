@@ -1,0 +1,15 @@
+footer{
+    width: 100%;
+    background-color: #7653FC;
+    height: clamp(75px, 4vw, 100vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    padding:0 32px 0 32px;
+    font-size: clamp(12px, 1.2vw, 100vw);
+}
+.info-bloc{
+    display: flex;
+    gap: clamp(10px, 4vh, 60px);
+}

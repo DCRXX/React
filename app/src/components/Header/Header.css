@@ -1,0 +1,102 @@
+header{
+    width: clamp(250px, 25vw, 18vw);
+    height: 100vh;
+    padding-top: clamp(10px, 4.8vh, 120px);
+    padding-left: clamp(10px, 1.8vw, 120px);
+    
+}
+.logo-container{
+    padding-bottom: clamp(10px, 5vh, 100px);
+}
+.logo-container img{
+    padding-left: clamp(10px, 1.2vw, 100px);
+    width: clamp(100px, 8vw, 100vw);
+}
+.search-conteiner{
+    display: flex;
+    padding-bottom: clamp(10px, 4vh, 100px);
+    border-bottom: 1px solid #85858563;
+    align-items: center;
+    gap: clamp(10px, 1vw, 100px);
+}
+.search:focus{
+    transform: scale(1.02);
+    border: 2px solid #7653FC;
+    outline: none;
+}
+.search{
+    width: clamp(100px, 70vw, 100%) !important;
+    height: clamp(20px, 5vh, 100vw) !important;
+    padding-left: clamp(5px, 3vh, 200px);
+    padding-top: clamp(5px, 1.5vh, 200px);
+    box-shadow: 0 5px 10px #0000000D;
+    resize: none;
+    border: 2px solid transparent;
+    border-radius: clamp(5px, 0.7vw, 40px);
+    display: flex;
+    overflow-y: hidden;
+    font-size: clamp(12px, 1.2vw, 100vw);
+    transition: all 0.3s cubic-bezier(1, 0, 0.4, 1);
+}
+.search::placeholder{
+    font-family: "Noto Sans", sans-serif;
+    font-size: clamp(12px, 1.1vw, 100vw);
+}
+
+.search-button{
+    padding: clamp(5px, 0.5vw, 30px);
+    border: none;
+    cursor: pointer;
+    background-color: #7653FC;
+    border-radius: clamp(5px, 0.5vw, 40px);
+    transition: all 0.3s ease;
+}
+.Icon-Search{
+    width: clamp(15px, 1vw, 120px);
+    height: auto;
+}
+.search-button:hover{
+    transform: scale(1.1);
+}
+.search-button:active{
+    transform: scale(0.9);
+}
+.list-of-services{
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp(10px, 3vh, 100px);
+    gap: clamp(10px, 2vh, 100px);
+}
+.Goods,
+.Books,
+.services,
+.coures{
+    gap: clamp(10px, 1vw, 50px);
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    font-size: clamp(14px, 2.6vh, 100px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.Goods img,
+.Books img,
+.services img,
+.coures img{
+    transition: all 0.3s ease;
+    width: clamp(30px, 2vw, 130px);
+}
+
+.Goods:hover,
+.Books:hover,
+.services:hover,
+.coures:hover{
+    color: #7653FC;
+}
+
+.Goods:hover img,
+.Books:hover img,
+.services:hover img,
+.coures:hover img{
+    transform: scale(1.2);
+}
