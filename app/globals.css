@@ -15,4 +15,5 @@ main{
     display: flex;
     flex: 1;
     padding: 33px 34px 0 0;
+    height:100vh;
 }

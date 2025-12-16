@@ -1,9 +1,10 @@
 header{
     width: clamp(250px, 25vw, 18vw);
-    height: 100vh;
+    height: 100%;
+    position: relative;
     padding-top: clamp(10px, 4.8vh, 120px);
     padding-left: clamp(10px, 1.8vw, 120px);
-    
+    margin-bottom: clamp(10px, 6vh, 100px);
 }
 .logo-container{
     padding-bottom: clamp(10px, 5vh, 100px);
@@ -25,10 +26,10 @@ header{
     outline: none;
 }
 .search{
-    width: clamp(100px, 70vw, 100%) !important;
-    height: clamp(20px, 5vh, 100vw) !important;
+    width: clamp(10px, 70vw, 100%) !important;
+    height: clamp(5px, 3.5vh, 100vw) !important;
     padding-left: clamp(5px, 3vh, 200px);
-    padding-top: clamp(5px, 1.5vh, 200px);
+    padding-top: clamp(5px, 1vh, 200px);
     box-shadow: 0 5px 10px #0000000D;
     resize: none;
     border: 2px solid transparent;
@@ -44,7 +45,7 @@ header{
 }
 
 .search-button{
-    padding: clamp(5px, 0.5vw, 30px);
+    padding: clamp(4.5px, 0.5vw, 30px);
     border: none;
     cursor: pointer;
     background-color: #7653FC;
@@ -65,7 +66,7 @@ header{
     display: flex;
     flex-direction: column;
     padding-top: clamp(10px, 3vh, 100px);
-    gap: clamp(10px, 2vh, 100px);
+    gap: clamp(10px, 1vh, 100px);
 }
 .Goods,
 .Books,
@@ -75,7 +76,7 @@ header{
     display: flex;
     font-weight: 700;
     align-items: center;
-    font-size: clamp(14px, 2.6vh, 100px);
+    font-size: clamp(14px, 2.4vh, 100px);
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -87,10 +88,17 @@ header{
     width: clamp(30px, 2vw, 130px);
 }
 
+
 .Goods:hover,
 .Books:hover,
 .services:hover,
 .coures:hover{
+    color: #7653FC;
+}
+.Books.active,
+.services.active,
+.Goods.active,
+.coures.active{
     color: #7653FC;
 }
 
@@ -98,5 +106,53 @@ header{
 .Books:hover img,
 .services:hover img,
 .coures:hover img{
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+.accordion-content-coures{
+    border-left:1px solid #DFDFDF;
+    padding-left: clamp(5px, 2.5vw, 150px);
+    margin-left: clamp(5px, 1vw, 100px);
+    font-size: clamp(14px, 2vh, 100px);
+    color: #787D85;
+    display: grid;
+    gap: clamp(5px, 2.5vh, 100px);
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.7s ease;
+
+}
+.accordion-content-coures.open{
+    grid-template-rows: 1fr;
+}
+.accordion-content-inner {
+    overflow: hidden;
+}
+.accord-spis-1{
+    display: grid;
+    gap: clamp(5px, 1vh, 100px);
+}
+.accord-spis-1 p{
+    cursor: pointer;
+}
+.accord-spis-1 p:hover,
+.spis-item.active{
+    color: #7653FC;
+}
+.spis-item.active{
+    font-weight: 500;
+}
+
+.accordion-content-in-spis{
+    border-left:1px solid #DFDFDF;
+    padding-left: clamp(5px, 1vw, 150px);
+    font-size: clamp(14px, 1.8vh, 100px);
+    font-weight: 500;
+    color: #787D85;
+    display: grid;
+    gap: clamp(5px, 2.5vh, 100px);
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.7s ease;
+}
+
+.accordion-content-in-spis.open{
+    grid-template-rows: 1fr;
 }

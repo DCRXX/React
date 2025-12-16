@@ -4,6 +4,7 @@ footer{
     height: clamp(75px, 4vw, 100vh);
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
     color: #FFFFFF;
     padding:0 32px 0 32px;
