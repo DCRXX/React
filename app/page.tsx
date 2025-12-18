@@ -1,11 +1,19 @@
+'use client';
 import Link from 'next/link';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import RouteContent from './RouteContent';
 
 export default function HomePage(): ReactElement {
+  
+  const searchParams = useSearchParams();
+
+  const routeId = searchParams.get('content') || 'home';
+
+
+  console.log('page.tsx: routeId =', routeId);
+
   return (
-    <div>
-      <Link href="/src/page/home2">Добро пожаловать!</Link>
-      <p>Это главная страница</p>
-    </div>
+    <RouteContent routeId={routeId} />
   );
 }

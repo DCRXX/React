@@ -1,30 +1,50 @@
 'use client';
 import { ReactElement, useState, useRef, useEffect } from 'react';
 import './Header.css'
+
 import logo from './public/Logo.svg'
 import Icon_Search from './public/Search.svg'
 import { useIconHover, iconConfig } from './scripts/useHover';
 import { useAccordion, useAccordionChild } from './scripts/useAcordion';
+import { routes, getRoutesBySubcategory } from '../index';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Header(): ReactElement {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const currentRouteId = searchParams.get('content') || 'after-effect';
   const { hoverStates, handleMouseEnter, handleMouseLeave } = useIconHover();
   const { openSections, toggleSection } = useAccordion();
   const { openSectionsChild, toggleSectionChild } = useAccordionChild();
 
+
+  const handlecourseClick = (courseId: string) => {
+    console.log('Переключаемся на курс:', courseId);
+
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('content', courseId);
+
+    router.replace(`/?${params.toString()}`, { scroll: false });
+  }
+
+  const designCourses = getRoutesBySubcategory('courses', 'design');
+  const developmentCoures = getRoutesBySubcategory('courses', 'development');  
+  const analyticsCoures = getRoutesBySubcategory('courses', 'analytics');
+  const marketingCoures = getRoutesBySubcategory('coures', 'marketing');
 
   return <header>
     <div className="logo-container">
       <img src={logo.src}></img>
     </div>
     <div className='search-conteiner'>
-      <textarea
+      <input
         required
         maxLength={50}
         className='search'
         id='site_search'
         placeholder="Поиск..."
       >
-      </textarea>
+      </input>
       <button className='search-button'><img className='Icon-Search' src={Icon_Search.src} /></button>
     </div>
     <div className="list-of-services">
@@ -38,23 +58,34 @@ export default function Header(): ReactElement {
             hoverStates.courses ? iconConfig.courses.hover :
               iconConfig.courses.default
         } />
-        <p1>Курсы</p1>
+        <p>Курсы</p>
       </div>
       <div className={`accordion-content-coures ${openSections.courses ? 'open' : ''}`}>
         <div className='accordion-content-inner'>
           <div className='accord-spis-1'>
 
-            <p className={`spis-item ${openSectionsChild.desing ? 'active' : ''}`}
-              onClick={() => toggleSectionChild('desing')}
+            <p className={`spis-item ${openSectionsChild.design ? 'active' : ''}`}
+              onClick={() => toggleSectionChild('design')}
             >ДИЗАЙН</p>
 
-            <div className={`accordion-content-in-spis ${openSectionsChild.desing ? 'open' : ''}`}>
+            <div className={`accordion-content-in-spis ${openSectionsChild.design ? 'open' : ''}`}>
               <div className='accordion-content-inner'>
                 <div className='accord-spis-1'>
-                  <p>Photoshop</p>
-                  <p>AfterEffect</p>
-                  <p>Illustrator</p>
-                  <p>Figma</p>
+
+                  {designCourses.length > 0 ? (
+                    designCourses.map((course) => (
+                      <div
+                        key={course.id}
+                        className={`course-item ${currentRouteId === course.id ? 'active-course' : ''}`}
+                        onClick={() => handlecourseClick(course.id)}
+                      >
+                        <p>{course.label}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Курсы пока не добавлены</p>
+                  )}
+
                 </div>
               </div>
             </div>
@@ -66,11 +97,20 @@ export default function Header(): ReactElement {
             <div className={`accordion-content-in-spis ${openSectionsChild.development ? 'open' : ''}`}>
               <div className='accordion-content-inner'>
                 <div className='accord-spis-1'>
-                  <p>JavaScript</p>
-                  <p>React/Next.js</p>
-                  <p>Python</p>
-                  <p>Node.js</p>
-                  <p>Базы данных</p>
+
+                  {developmentCoures.length > 0 ? (
+                    developmentCoures.map((course) => (
+                      <div
+                        key={course.id}
+                        className={`course-item ${currentRouteId === course.id ? 'active-course' : ''}`}
+                        onClick={() => handlecourseClick(course.id)}
+                      >
+                        <p>{course.label}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Курсы пока не добавлены</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -82,10 +122,21 @@ export default function Header(): ReactElement {
             <div className={`accordion-content-in-spis ${openSectionsChild.analytics ? 'open' : ''}`}>
               <div className='accordion-content-inner'>
                 <div className='accord-spis-1'>
-                  <p>Excel</p>
-                  <p>Google Analytics</p>
-                  <p>SQL для аналитиков</p>
-                  <p>Tableau</p>
+
+                  {analyticsCoures.length > 0 ? (
+                    analyticsCoures.map((course) => (
+                      <div
+                        key={course.id}
+                        className={`course-item ${currentRouteId === course.id ? 'active-course' : ''}`}
+                        onClick={() => handlecourseClick(course.id)}
+                      >
+                        <p>{course.label}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Курсы пока не добавлены</p>
+                  )}
+
                 </div>
               </div>
             </div>
@@ -97,10 +148,21 @@ export default function Header(): ReactElement {
             <div className={`accordion-content-in-spis ${openSectionsChild.marketing ? 'open' : ''}`}>
               <div className='accordion-content-inner'>
                 <div className='accord-spis-1'>
-                  <p>SEO</p>
-                  <p>SMM</p>
-                  <p>Копирайтинг</p>
-                  <p>Контекстная реклама</p>
+
+                  {analyticsCoures.length > 0 ? (
+                    analyticsCoures.map((course) => (
+                      <div
+                        key={course.id}
+                        className={`course-item ${currentRouteId === course.id ? 'active-course' : ''}`}
+                        onClick={() => handlecourseClick(course.id)}
+                      >
+                        <p>{course.label}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Курсы пока не добавлены</p>
+                  )}
+
                 </div>
               </div>
             </div>
@@ -117,7 +179,7 @@ export default function Header(): ReactElement {
             hoverStates.services ? iconConfig.services.hover :
               iconConfig.services.default
         } />
-        <p1>Сервисы</p1>
+        <p>Сервисы</p>
       </div>
       <div className={`accordion-content-coures ${openSections.services ? 'open' : ''}`}>
         <div className='accordion-content-inner'>
@@ -177,7 +239,7 @@ export default function Header(): ReactElement {
             hoverStates.Books ? iconConfig.Books.hover :
               iconConfig.Books.default
         } />
-        <p1>Книги</p1>
+        <p>Книги</p>
       </div>
       <div className={`accordion-content-coures ${openSections.Books ? 'open' : ''}`}>
         <div className='accordion-content-inner'>
@@ -225,7 +287,7 @@ export default function Header(): ReactElement {
             hoverStates.Goods ? iconConfig.Goods.hover :
               iconConfig.Goods.default
         } />
-        <p1>Товары</p1>
+        <p>Товары</p>
       </div>
       <div className={`accordion-content-coures ${openSections.Goods ? 'open' : ''}`}>
         <div className='accordion-content-inner'>

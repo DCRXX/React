@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+export const Content_keys ={
+    coures:{
+        design:{
+            photoshop: 'photoshop',
+        }
+    }
+}
+
 export type AccordionSection = {
     courses: boolean;
     services: boolean;
@@ -7,7 +15,7 @@ export type AccordionSection = {
     Goods: boolean;
 };
 export type AccordionSectionChild = {
-    desing: boolean;
+    design: boolean;
     development: boolean;
     analytics: boolean;
     marketing: boolean;
@@ -28,7 +36,7 @@ export const useAccordionChild = (
 ) => {
 
     const [openSectionsChild, setOpenSections] = useState<AccordionSectionChild>({
-        desing: initialOpen === 'desing',
+        design: initialOpen === 'design',
         development: initialOpen === 'development',
         analytics: initialOpen === 'analytics',
         marketing: initialOpen === 'marketing',
@@ -45,7 +53,7 @@ export const useAccordionChild = (
         setOpenSections(prev => {
             if (behavior === 'exclusive') {
                 const newState: AccordionSectionChild = {
-                    desing: false,
+                    design: false,
                     development: false,
                     analytics: false,
                     marketing: false,

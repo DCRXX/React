@@ -27,21 +27,20 @@ header{
 }
 .search{
     width: clamp(10px, 70vw, 100%) !important;
-    height: clamp(5px, 3.5vh, 100vw) !important;
-    padding-left: clamp(5px, 3vh, 200px);
-    padding-top: clamp(5px, 1vh, 200px);
+    flex: 1;
+    padding-left: clamp(5px, 2vh, 200px) !important;
+    padding: clamp(5px, 1vh, 100px);
     box-shadow: 0 5px 10px #0000000D;
-    resize: none;
     border: 2px solid transparent;
     border-radius: clamp(5px, 0.7vw, 40px);
     display: flex;
     overflow-y: hidden;
-    font-size: clamp(12px, 1.2vw, 100vw);
+    font-size: clamp(12px, 1vw, 100vw);
     transition: all 0.3s cubic-bezier(1, 0, 0.4, 1);
 }
 .search::placeholder{
     font-family: "Noto Sans", sans-serif;
-    font-size: clamp(12px, 1.1vw, 100vw);
+    font-size: clamp(12px, 1vw, 100vw);
 }
 
 .search-button{
