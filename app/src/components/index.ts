@@ -163,6 +163,10 @@ export function getRouteByPath(path: string): RouteConfig | undefined {
     return routes.find(route => route.path === path);
 }
 
+export function getRouteByLabel(label: string): RouteConfig | undefined {
+    return routes.find(route => route.label === label);
+}
+
 export function getRoutesByCategory(category: string): RouteConfig[] {
     return routes.filter(route => route.category === category);
 }

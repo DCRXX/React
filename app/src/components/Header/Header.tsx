@@ -12,7 +12,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 export default function Header(): ReactElement {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const currentRouteId = searchParams.get('content') || 'after-effect';
+  const currentRouteId = searchParams.get('content') || 'home';
   const { hoverStates, handleMouseEnter, handleMouseLeave } = useIconHover();
   const { openSections, toggleSection } = useAccordion();
   const { openSectionsChild, toggleSectionChild } = useAccordionChild();
@@ -30,7 +30,7 @@ export default function Header(): ReactElement {
   const designCourses = getRoutesBySubcategory('courses', 'design');
   const developmentCoures = getRoutesBySubcategory('courses', 'development');  
   const analyticsCoures = getRoutesBySubcategory('courses', 'analytics');
-  const marketingCoures = getRoutesBySubcategory('coures', 'marketing');
+  const marketingCoures = getRoutesBySubcategory('courses', 'marketing');
 
   return <header>
     <div className="logo-container">
@@ -149,8 +149,8 @@ export default function Header(): ReactElement {
               <div className='accordion-content-inner'>
                 <div className='accord-spis-1'>
 
-                  {analyticsCoures.length > 0 ? (
-                    analyticsCoures.map((course) => (
+                  {marketingCoures.length > 0 ? (
+                    marketingCoures.map((course) => (
                       <div
                         key={course.id}
                         className={`course-item ${currentRouteId === course.id ? 'active-course' : ''}`}

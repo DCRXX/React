@@ -1,16 +1,19 @@
 'use client';
-import { ReactElement, useEffect, useState, Suspense } from 'react';
-import { getRouteById } from './src/components/index';
-import { setCommentRange } from 'typescript';
+import React, { ReactElement, useEffect, useState } from 'react';
+import { getRouteById, RouteConfig, } from './src/components/index';
+
 
 interface RouteContentProps {
     routeId: string;
 }
 
-export default function RouteContent({ routeId }: RouteContentProps): ReactElement{
+
+export default function RouteContent({ routeId }: RouteContentProps): ReactElement {
     const [Component, setComponent] = useState<React.ComponentType | null>(null);
+    const [routeData, setRouteData] = useState<RouteConfig | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
 
     useEffect(() => {
         const loadComponent = async () => {
@@ -25,8 +28,9 @@ export default function RouteContent({ routeId }: RouteContentProps): ReactEleme
                 }
 
                 const module = await route.component();
+                setRouteData(route);
                 setComponent(() => module);
-            } catch (err){
+            } catch (err) {
                 console.error('Ошибка загрузки компонента:', err);
                 setError(err instanceof Error ? err.message : 'Неизвестная ошибка');
             } finally {
@@ -36,9 +40,7 @@ export default function RouteContent({ routeId }: RouteContentProps): ReactEleme
 
         loadComponent();
 
-        return () => {
-            setComponent(null);
-        };
+
     }, [routeId]);
 
     if (loading) {
@@ -49,8 +51,8 @@ export default function RouteContent({ routeId }: RouteContentProps): ReactEleme
             </div>
         )
     }
-    if (error){
-        return(
+    if (error) {
+        return (
             <div className="error-container">
                 <h1>Ошибка загрузки</h1>
                 <p>{error}</p>
@@ -59,16 +61,14 @@ export default function RouteContent({ routeId }: RouteContentProps): ReactEleme
     }
 
     if (!Component) {
-        return(
+        return (
             <div className="not-found-container">
                 <h3>Контент не найден</h3>
             </div>
         )
     }
+    if (!routeData) return <div>Нет данных</div>;
 
-    return (
-        <Suspense fallback={<div>Загрузка...</div>}>
-            <Component />
-        </Suspense>
-    )
+    return React.createElement(Component);
+
 }

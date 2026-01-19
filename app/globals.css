@@ -6,14 +6,19 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-a, p, p1, h1, li{
+a, p, p1, h1, li, span, ::placeholder{
     margin: 0;
     text-decoration: none;
-    font-family: "Noto Sans", sans-serif;
+    font-synthesis: none;
+    font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 main{
     display: flex;
     flex: 1;
-    padding: 33px 34px 0 0;
-    height:100vh;
+    min-height: 100vh;
+    padding: clamp(5px, 1.4vw, 100px);
+    padding-right: clamp(10px, 4vw, 100px);
 }
