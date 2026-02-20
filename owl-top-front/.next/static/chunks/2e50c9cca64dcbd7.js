@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,23250,t=>{"use strict";var e=t.i(49910);function c(){return(0,e.jsx)("div",{className:"container-stub",children:(0,e.jsx)("p",{children:"Контент для этого раздела еще не добавили"})})}t.s(["default",()=>c])}]);

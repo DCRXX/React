@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/linni/Desktop/React/top-app/owl-top-front/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 41, height: 37 }\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,4LAAG;IAAE,OAAO;IAAI,QAAQ;AAAG"}}]
+}

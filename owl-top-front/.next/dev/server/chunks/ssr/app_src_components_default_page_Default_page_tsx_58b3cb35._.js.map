@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/linni/Desktop/React/top-app/owl-top-front/app/src/components/default_page/Default_page.tsx"],"sourcesContent":["export default function Home(): React.ReactElement{\r\n    return(\r\n        <div className=\"home\">home</div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAI,WAAU;kBAAO;;;;;;AAE9B"}}]
+}

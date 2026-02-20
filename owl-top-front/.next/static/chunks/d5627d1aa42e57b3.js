@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,87183,e=>{"use strict";var t=e.i(49910),c=e.i(73087);function i(){let e,i=(0,c.c)(1);return i[0]===Symbol.for("react.memo_cache_sentinel")?(e=(0,t.jsx)("div",{children:"AfterEffect"}),i[0]=e):e=i[0],e}e.s(["default",()=>i])}]);

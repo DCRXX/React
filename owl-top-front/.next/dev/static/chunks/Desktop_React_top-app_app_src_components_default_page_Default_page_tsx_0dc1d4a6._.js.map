@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["C:/Users/linni/Desktop/React/top-app/app/src/components/default_page/Default_page.tsx"],"sourcesContent":["export default function Home(): React.ReactElement{\r\n    return(\r\n        <div className=\"home\">home</div>\r\n    )\r\n}"],"names":["Home","$","_c","$i","Symbol","for","t0"],"mappings":";;;;;;;;AAAe;IAAA,MAAAC,CAAA,OAAAC,kNAAA,EAAA;IAAA,IAAAD,CAAA,CAAA,EAAA,KAAA,oEAAA;QAAA,IAAA,IAAAE,EAAA,GAAA,GAAAA,EAAA,GAAA,GAAAA,EAAA,IAAA,EAAA;YAAAF,CAAA,CAAAE,EAAA,CAAA,GAAAC,MAAA,CAAAC,GAAA,CAAA;QAAA;QAAAJ,CAAA,CAAA,EAAA,GAAA;IAAA;IAAA,IAAAK,EAAA;IAAA,IAAAL,CAAA,CAAA,EAAA,KAAAG,MAAA,CAAAC,GAAA,CAAA,8BAAA;QAEPC,EAAA,iBAAA,+NAAA,GAAgC;YAAjB,SAAM,EAAN,MAAM;sBAAC,IAAI,EAA1B,GAAgC;;;;;;QAAAL,CAAA,CAAA,EAAA,GAAAK,EAAA;IAAA,OAAA;QAAAA,EAAA,GAAAL,CAAA,CAAA,EAAA;IAAA;IAAA,OAAhCK,EAAgC;AAAA;KAFzBN,KAAA","ignoreList":[]}}]
+}

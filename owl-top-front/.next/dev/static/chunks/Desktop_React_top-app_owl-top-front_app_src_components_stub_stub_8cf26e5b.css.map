@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/linni/Desktop/React/top-app/owl-top-front/app/src/components/stub/stub.css"],"sourcesContent":[".container-stub{\r\n    padding-block: clamp(30px, 2vw, 500px);\r\n    padding-inline: clamp(10px, 2vw, 500px);\r\n    background-color: #FFFFFF;\r\n    border-radius: clamp(10px, 1vw, 50px);\r\n    color: #7653FC;\r\n    font-weight: 600;\r\n    font-size: clamp(12px, 1vw, 50px);\r\n    box-shadow: 0 5px 10px #0000000d;\r\n}"],"names":[],"mappings":"AAAA"}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/linni/Desktop/React/top-app/app/src/components/stub/stub.tsx"],"sourcesContent":["'use client'\r\nimport { ReactElement } from 'react';\r\n\r\nexport default function stub(): ReactElement {\r\n\r\n  return (\r\n    <div>Заглушка</div>\r\n  );\r\n}"],"names":[],"mappings":";;;;;AAAA;;AAGe,SAAS;IAEtB,qBACE,gRAAC;kBAAI;;;;;;AAET"}}]
+}

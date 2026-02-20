@@ -1,0 +1,13 @@
+/* [project]/Desktop/React/top-app/owl-top-front/app/src/components/stub/stub.css [app-client] (css) */
+.container-stub {
+  color: #7653fc;
+  background-color: #fff;
+  border-radius: clamp(10px, 1vw, 50px);
+  padding-block: clamp(30px, 2vw, 500px);
+  padding-inline: clamp(10px, 2vw, 500px);
+  font-size: clamp(12px, 1vw, 50px);
+  font-weight: 600;
+  box-shadow: 0 5px 10px #0000000d;
+}
+
+/*# sourceMappingURL=Desktop_React_top-app_owl-top-front_app_src_components_stub_stub_8cf26e5b.css.map*/

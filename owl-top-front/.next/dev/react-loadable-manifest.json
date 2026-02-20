@@ -1,0 +1,33 @@
+{
+  "app\\src\\components\\index.ts -> ./courses/design/AfterEffect/AfterEffectContent": {
+    "id": "app\\src\\components\\index.ts -> ./courses/design/AfterEffect/AfterEffectContent",
+    "files": [
+      "static/chunks/_app-pages-browser_app_src_components_courses_design_AfterEffect_AfterEffectContent_tsx.js"
+    ]
+  },
+  "app\\src\\components\\index.ts -> ./courses/design/photoshop/PhotoshopContent": {
+    "id": "app\\src\\components\\index.ts -> ./courses/design/photoshop/PhotoshopContent",
+    "files": [
+      "static/css/_app-pages-browser_app_src_components_courses_design_photoshop_PhotoshopContent_tsx.css",
+      "static/chunks/_app-pages-browser_app_src_components_courses_design_photoshop_PhotoshopContent_tsx.js"
+    ]
+  },
+  "app\\src\\components\\index.ts -> ./default_page/Default_page": {
+    "id": "app\\src\\components\\index.ts -> ./default_page/Default_page",
+    "files": [
+      "static/chunks/_app-pages-browser_app_src_components_default_page_Default_page_tsx.js"
+    ]
+  },
+  "app\\src\\components\\index.ts -> ./stub/stub": {
+    "id": "app\\src\\components\\index.ts -> ./stub/stub",
+    "files": [
+      "static/chunks/_app-pages-browser_app_src_components_stub_stub_tsx.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "node_modules\\next\\dist\\client\\dev\\hot-reloader\\app\\web-socket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
+    ]
+  }
+}

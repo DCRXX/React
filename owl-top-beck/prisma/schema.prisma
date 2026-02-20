@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model File {
+  id          Int      @id @default(autoincrement())
+  filename    String   
+  url         String   
+  size        Int      
+  mimeType    String   
+  uploadedAt  DateTime @default(now())
+  logoCourses   CourseData[] @relation("LogoRelation")
+  ratingCourses CourseData[] @relation("RatingRelation")
+}
+
+model ContentType {
+  id            Int   @id @default(autoincrement())
+  type          String      @unique
+  label         String 
+  categories      Category[]
+}
+
+model Category {
+  id            Int           @id @default(autoincrement())
+  name          String        @unique
+  contentTypeId Int
+  contentType   ContentType @relation(fields: [contentTypeId], references: [id])
+  subcategories Subcategory[]
+}
+
+model Subcategory{
+  id            Int            @id @default(autoincrement())
+  name          String
+  slug          String @unique
+  categoryId    Int
+  category      Category @relation(fields: [categoryId], references: [id])
+  courseData    CourseData?
+}
+
+model CourseData{
+  id            Int            @id @default(autoincrement())
+  name          String
+  logoImageId   Int?
+  logoImage     File?   @relation("LogoRelation", fields:[logoImageId], references: [id])
+  price         Int
+  discount      Int
+  creditMonthly Int
+  ratingImageId Int?
+  ratingImage   File?   @relation("RatingRelation", fields: [ratingImageId], references: [id])
+  description   String
+  advantages    String
+  flaws         String
+  documentType  String
+  difficulty    String
+  duration      String
+  JobGuarantee  Boolean @default(false)
+  subcategoryId Int     @unique
+  subcategory   Subcategory @relation(fields: [subcategoryId], references: [id])
+}
+

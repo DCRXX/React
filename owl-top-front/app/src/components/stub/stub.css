@@ -1,0 +1,10 @@
+.container-stub{
+    padding-block: clamp(30px, 2vw, 500px);
+    padding-inline: clamp(10px, 2vw, 500px);
+    background-color: #FFFFFF;
+    border-radius: clamp(10px, 1vw, 50px);
+    color: #7653FC;
+    font-weight: 600;
+    font-size: clamp(12px, 1vw, 50px);
+    box-shadow: 0 5px 10px #0000000d;
+}

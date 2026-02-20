@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["C:/Users/linni/Desktop/React/top-app/owl-top-front/app/src/components/stub/stub.tsx"],"sourcesContent":["'use client'\r\nimport { ReactElement } from 'react';\r\nimport './stub.css'\r\n\r\nexport default function stub(): ReactElement {\r\n\r\n  return (\r\n    <div className=\"container-stub\">\r\n      <p>Контент для этого раздела еще не добавили</p>\r\n    </div>\r\n  );\r\n}"],"names":["ReactElement","stub"],"mappings":";;;;;AAAA,YAAY;;;AAIG,SAASC,IAAIA,CAAA,CAAE,EAAED,YAAY,CAAC;IAE3C,qBACE,6LAAC,GAAG;QAAC,SAAS,EAAC,gBAAgB,CAAC;gCAC9B,6LAAC,CAAC;sBAAC,yCAAyC,EAAE,CAAC,CAAC;;;;;;;;;;;AAGtD","ignoreList":[]}}]
+}

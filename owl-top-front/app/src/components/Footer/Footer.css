@@ -1,0 +1,23 @@
+footer{
+    background-color: #7653FC;
+    height: clamp(75px, 4vw, 100vh);
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    color: #FFFFFF;
+    padding:0 32px 0 32px;
+    grid-row: 3;
+    grid-column: 1 / 3;
+    font-size: clamp(14px, .8vw, 100vw);
+    margin-top: clamp(20px, 1vw, 50px);
+}
+.info-bloc{
+    display: flex;
+    gap: clamp(10px, 4vh, 60px);
+}
+@media screen and (max-width: 500px) {
+    footer{
+        display: grid;
+    }
+}

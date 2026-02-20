@@ -1,0 +1,27 @@
+/* [project]/Desktop/React/top-app/owl-top-front/app/src/components/Footer/Footer.css [app-client] (css) */
+footer {
+  color: #fff;
+  background-color: #7653fc;
+  grid-area: 3 / 1 / auto / 3;
+  justify-content: space-between;
+  align-items: center;
+  height: clamp(75px, 4vw, 100vh);
+  margin-top: clamp(20px, 1vw, 50px);
+  padding: 0 32px;
+  font-size: max(14px, .8vw);
+  display: flex;
+  position: relative;
+}
+
+.info-bloc {
+  gap: clamp(10px, 4vh, 60px);
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    display: grid;
+  }
+}
+
+/*# sourceMappingURL=3d860_React_top-app_owl-top-front_app_src_components_Footer_Footer_css_bad6b30c._.single.css.map*/
