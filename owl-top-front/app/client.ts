@@ -1,4 +1,4 @@
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003';
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'shortline.proxy.rlwy.net:15293';
 
 export async function apiRequest<T>(endpint: string, options: RequestInit = {}) : Promise<T>{
     const url = `${API_BASE_URL}${endpint}`;
