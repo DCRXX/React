@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.npm
+
+# Production
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Frontend specific
+.next/
+node_modules/
+dist/
+build/
+
+# Backend specific
+owl-top-beck/node_modules/
+owl-top-beck/dist/
+owl-top-beck/build/

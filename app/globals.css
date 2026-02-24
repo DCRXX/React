@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    background-color: #F5F6F8;
+    display: grid; 
+    grid-template-columns: auto 1fr;
+}
+a, p, p1, h1, li, span, ::placeholder{
+    margin: 0;
+    height: fit-content;
+    text-decoration: none;
+    font-synthesis: none;
+    font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.downloading-the-application{
+    width: 100%;
+    margin-top: clamp(30px, 5vw, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 3;
+}
+.op{
+    width: max-content;
+    grid-column: 2;
+    font-size: clamp(12px, 1vw, 50px);
+    padding-inline: clamp(20px, 2vw, 500px);
+    padding-block: clamp(30px, 2vw, 500px);
+    display: grid;
+    background-color: #FFFFFF;
+    border-radius: clamp(5px, 1vw, 50px);
+    color: #7653FC;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 5px 10px #0000000d;
+}
+.loading-container{
+    display: flex;
+    width: fit-content;
+    padding-inline: clamp(20px, 1vw, 500px);
+    padding-block: clamp(30px, 1vw, 500px);
+    font-size: clamp(12px, 1vw, 50px);
+    background-color: #FFFFFF;
+    font-weight: 600;
+    border-radius: clamp(10px, 1vw, 50px);
+    color: #7653FC;
+    box-shadow: 0 5px 10px #0000000d;
+}
+
+
+main{
+    display: flex;
+    flex: 1;
+    position: relative;
+    grid-column: 2;
+    min-height: 100vh;
+    padding: clamp(5px, 1.6vw, 100px);
+    padding-right: clamp(10px, 4vw, 100px);
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 940px){
+    header{
+        grid-row: 1;
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: auto 1fr .1fr;
+        width: auto !important;
+        padding-inline: clamp(10px, .5vw, 50px);
+        padding-top: clamp(20px, .5vw, 50px);
+        justify-content: center;
+        height: max-content;
+        margin-bottom: clamp(10px, 1vh, 100px);
+    }
+    .logo-container{
+        grid-column: 1;
+        grid-row: 1;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+    .mobile-menu-modal{
+        display: grid;
+    }
+    .mobile-menu-modal.open{
+        grid-column: 3;
+        grid-row: 1;
+        z-index: 1000;
+    }
+    .mobile-menu-toggle{
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+    }
+    .container{
+        width: 70%;
+    }
+    .search-conteiner{
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: center;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .list-of-services{
+        padding-top: 0;
+        justify-content: center;
+    }
+    main{
+        grid-row-start: 2;
+        padding: clamp(10px, 1vw, 50px);
+    }
+    footer{
+        grid-row-start: 3;
+        padding: clamp(10px, 1vw, 50px);
+    }
+}
+@media screen and (max-width: 500px){
+    header{
+        grid-row-gap: clamp(10px, 1vw, 50px);
+    }
+    .search-conteiner{
+        grid-row: 2;
+        grid-column: 1 / 4;
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        width: 95%;
+    }
+}
+    
